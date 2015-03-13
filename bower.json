@@ -1,0 +1,22 @@
+{
+  "name": "PassShare",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bostonusnavy/PassShare",
+  "authors": [
+    "bostonusnavy <robert.b.degroot@gmail.com>"
+  ],
+  "description": "An Application that Stores Authentication/Account Information for a User. A User Can Share that Information with Other Selected Users.",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "toastr": "~2.1.0",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "angular-resource": "~1.3.14"
+  }
+}
