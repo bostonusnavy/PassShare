@@ -25,7 +25,11 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost/passshare');
+if(env === 'development') {
+    mongoose.connect('mongodb://localhost/passshare');
+} else {
+    mongoose.connect('mongodb://rdegroot:passshare@ds031117.mongolab.com:31117/passshare');
+}
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'DB connection error...'));
 db.once('open', function callback() {
@@ -48,6 +52,6 @@ app.get('*', function (req, res) {
     });
 });
 
-var port = 3030;
+var port = process.env.PORT || 3030;
 app.listen(port);
 console.log("Listening on port " + port + "...");
