@@ -1,0 +1,15 @@
+{
+  "name": "PassShare",
+  "version": "1.0.0",
+  "description": "An Application that Stores Authentication/Account Information for a User. A User Can Share that Information with Other Selected Users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert DeGroot",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.2",
+    "jade": "^1.9.2"
+  }
+}
