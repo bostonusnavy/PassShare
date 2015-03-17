@@ -1,0 +1,33 @@
+body {
+  padding: 6em;
+  background-color: #d3d3d3;
+}
+.navbar-fixed-top {
+  background-color: #a9a9a9;
+  border-bottom: solid #000 0.1em;
+}
+.navbar-header a.navbar-brand {
+/*margin-top -.05em*/
+  margin-bottom: -0.25em;
+  margin-right: 2.5em;
+}
+.navbar-form .form-group {
+  margin-left: 0.75em;
+}
+.navbar-form button {
+  margin-left: 0.5em;
+}
+.howToUse {
+  margin-bottom: 1em;
+}
+.step {
+  font-size: 2em;
+}
+footer {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+footer.container.text-center {
+  border-top: solid #000 0.1em;
+  margin-top: 3em;
+}
