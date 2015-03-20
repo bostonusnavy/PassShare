@@ -17,6 +17,10 @@ body {
 .navbar-form button {
   margin-left: 0.5em;
 }
+.toast-top-right {
+  top: 4.4em;
+  background-color: #a9a9a9;
+}
 .howToUse {
   margin-bottom: 1em;
 }
