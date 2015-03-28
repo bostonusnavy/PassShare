@@ -5,7 +5,7 @@
         .form-group
             input.form-control(type="password", placeholder="Password", ng-model="password")
         button.btn.btn-primary(ng-click="signin(username, password)") Sign In
-        //button.btn.btn-primary(ng-click="signin(usrname, password)") **** CREATE SIGN UP BUTTON HERE!! ****
+        a.btn.btn-default(href="/signup") Sign Up
     ul.nav.navbar-nav.navbar-right(ng-show='identity.isAuthenticated()')
         li.dropdown
             a.dropdown-toggle(href="", data-toggle="dropdown")
@@ -14,5 +14,7 @@
             ul.dropdown-menu
                 li(ng-show="identity.currentUser.isAdmin()")
                     a(href="/admin/users") User Admin
+                li
+                    a(href="/profile") User Profile
                 li
                     a(href="", ng-click="signout()") Sign Out

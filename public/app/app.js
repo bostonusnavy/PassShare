@@ -4,6 +4,9 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
     var routeRoleChecks = {
         admin: {auth: function (psAuth) {
             return psAuth.authorizeCurrentUserForRoute('admin');
+        }},
+        user: {auth: function (psAuth) {
+            return psAuth.authorizeAuthenticatedUserForRoute();
         }}
     };
 
@@ -15,7 +18,14 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', { templateUrl: '/partials/main/main', controller: 'psMainCtrl'})
         .when('/admin/users', { templateUrl: '/partials/admin/user-list',
-            controller: 'psUserListCtrl', resolve: routeRoleChecks.admin});
+            controller: 'psUserListCtrl', resolve: routeRoleChecks.admin
+        })
+        .when('/signup', { templateUrl: '/partials/account/signup',
+            controller: 'psSignupCtrl'
+        })
+        .when('/profile', { templateUrl: '/partials/account/profile',
+            controller: 'psProfileCtrl', resolve: routeRoleChecks.user
+        })
 });
 
 

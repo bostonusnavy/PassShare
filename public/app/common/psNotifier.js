@@ -5,6 +5,10 @@ angular.module('app').factory('psNotifier', function (psToastr) {
         notify: function(msg){
             psToastr.success(msg);
             console.log(msg);
+        },
+        error: function(msg) {
+            psToastr.error(msg);
+            console.log(msg);
         }
     }
 });
