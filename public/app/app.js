@@ -37,7 +37,7 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
         .when('/accounts', {
             templateUrl: '/partials/accountResource/accounts'
         })
-        .when('/createAccount', {
+        .when('/createaccount', {
             templateUrl: '/partials/accountResource/createAccount'
         })
 });

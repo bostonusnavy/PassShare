@@ -5,14 +5,14 @@
                 legend Create New Account
                 .form-group
                     label.col-md-2.control-label(for="username") Username
-                    .col-md-10
+                    .col-md-6
                         input.form-control(name="username", type="text", placeholder="Username", ng-model="username", required)
                 .form-group
                     label.col-md-2.control-label(for="password") Password
-                    .col-md-10
+                    .col-md-6
                         input.form-control(name="password", type="text", placeholder="Password", ng-model="password", required)
                 .form-group
-                    .col-md-10.col-md-offset-2
+                    .col-md-6.col-md-offset-2
                         .pull-right
                             button.btn.btn-primary(ng-click="createAccount()", ng-disabled="createAccountForm.$invalid") Submit
                             | &nbsp;

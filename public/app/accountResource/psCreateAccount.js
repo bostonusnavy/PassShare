@@ -1,10 +1,11 @@
 angular.module('app').controller('psCreateAccount', function ($scope, $http, psNotifier, $location) {
 
-    $scope.createNewAccount = function () {
+    $scope.createAccount = function () {
         var newAccountData = {
             username: $scope.username,
             password: $scope.password
         };
+
 
 
         //Make an AJAX Request
