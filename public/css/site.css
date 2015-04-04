@@ -28,7 +28,14 @@ body {
   margin-bottom: 1em;
 }
 .step {
-  font-size: 2em;
+  margin: 1em;
+}
+.glyphicon-chevron-right {
+  font-size: 3em;
+}
+p.stepInstruction {
+  padding: 0.25em;
+  font-size: 1.5em;
 }
 footer {
   padding-left: 1em;

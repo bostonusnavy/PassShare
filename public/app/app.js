@@ -16,15 +16,29 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
     });
 
     $routeProvider
-        .when('/', { templateUrl: '/partials/main/main', controller: 'psMainCtrl'})
-        .when('/admin/users', { templateUrl: '/partials/admin/user-list',
-            controller: 'psUserListCtrl', resolve: routeRoleChecks.admin
+        .when('/', {
+            templateUrl: '/partials/main/main',
+            controller: 'psMainCtrl'
         })
-        .when('/signup', { templateUrl: '/partials/account/signup',
+        .when('/admin/users', {
+            templateUrl: '/partials/admin/user-list',
+            controller: 'psUserListCtrl',
+            resolve: routeRoleChecks.admin
+        })
+        .when('/signup', {
+            templateUrl: '/partials/account/signup',
             controller: 'psSignupCtrl'
         })
-        .when('/profile', { templateUrl: '/partials/account/profile',
-            controller: 'psProfileCtrl', resolve: routeRoleChecks.user
+        .when('/profile', {
+            templateUrl: '/partials/account/profile',
+            controller: 'psProfileCtrl',
+            resolve: routeRoleChecks.user
+        })
+        .when('/accounts', {
+            templateUrl: '/partials/accountResource/accounts'
+        })
+        .when('/createAccount', {
+            templateUrl: '/partials/accountResource/createAccount'
         })
 });
 
