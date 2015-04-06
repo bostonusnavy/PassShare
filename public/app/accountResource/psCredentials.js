@@ -3,5 +3,5 @@ angular.module('app').factory('psCredentials', function ($resource) {
         update: {method:'PUT', isArray:false}
     });
 
-    return AccountResource;
+    return credentialsResource;
 });

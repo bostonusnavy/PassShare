@@ -7,7 +7,6 @@ angular.module('app').controller('psCreateCredentialsCtrl', function ($scope, $h
         };
 
 
-
         //Make an AJAX Request
 
 
