@@ -34,11 +34,11 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             controller: 'psProfileCtrl',
             resolve: routeRoleChecks.user
         })
-        .when('/accounts', {
-            templateUrl: '/partials/accountResource/accounts'
+        .when('/credentials', {
+            templateUrl: '/partials/credentialsResource/credentials'
         })
-        .when('/createaccount', {
-            templateUrl: '/partials/accountResource/createAccount'
+        .when('/createcredentials', {
+            templateUrl: '/partials/credentialsResource/createCredentials'
         })
 });
 

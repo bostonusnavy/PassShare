@@ -1,7 +1,7 @@
-angular.module('app').controller('psCreateAccount', function ($scope, $http, psNotifier, $location) {
+angular.module('app').controller('psCreateCredentialsCtrl', function ($scope, $http, psNotifier, $location) {
 
-    $scope.createAccount = function () {
-        var newAccountData = {
+    $scope.createCredentials = function () {
+        var newCredentialsData = {
             username: $scope.username,
             password: $scope.password
         };
