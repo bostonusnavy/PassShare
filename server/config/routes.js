@@ -1,13 +1,18 @@
 var auth = require('./auth'),
-    users = require('../controllers/users'),
     mongoose = require('mongoose'),
-    User = mongoose.model('User');
+    users = require('../controllers/users'),
+    User = mongoose.model('User'),
+    credentials = require('../controllers/credentials'),
+    Credentials = mongoose.model('Credentials');
 
 module.exports = function(app) {
 
     app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
     app.post('/api/users', users.createUser);
     app.put('/api/users', users.updateUser);
+
+    app.post('/api/credentials', credentials.createCredentials);
+    app.put('/api/credentials', credentials.updateCredentials);
 
     app.get('/partials/*', function (req, res) {
         res.render('../../public/app/' + req.params[0]);
