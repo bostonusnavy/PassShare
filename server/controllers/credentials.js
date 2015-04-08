@@ -9,7 +9,7 @@ exports.getCredentials = function (req, res) {
 exports.createCredentials = function (req, res) {
     var credentialsData = req.body;
 
-    Credentials.create(credentialsData, function(err, user) {
+    Credentials.create(credentialsData, function(err, credentials) {
         if(err) {
             if(err.toString().indexOf('E11000') > -1) {
                 err = new Error('Duplicate credentials username exists');
