@@ -11,8 +11,9 @@ module.exports = function(app) {
     app.post('/api/users', users.createUser);
     app.put('/api/users', users.updateUser);
 
+    app.get('/api/credentials', credentials.getCredentials);
     app.post('/api/credentials', credentials.createCredentials);
-    app.put('/api/credentials', credentials.updateCredentials);
+    //app.put('/api/credentials', credentials.updateCredentials);
 
     app.get('/partials/*', function (req, res) {
         res.render('../../public/app/' + req.params[0]);
@@ -27,7 +28,8 @@ module.exports = function(app) {
 
     app.get('*', function (req, res) {
         res.render('index', {
-            bootstrappedUser: req.user
+            bootstrappedUser: req.user,
+            bootstrappedCredentials: req.credentials
         });
     });
 };

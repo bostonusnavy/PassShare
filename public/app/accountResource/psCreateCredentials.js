@@ -7,28 +7,29 @@ angular.module('app').factory('psCreateCredentials', function ($q, $window, psId
     }
 
     return {
-        currentUser: currentUser,
-        isAuthenticated: function() {
-            return !!this.currentUser;
-        },
-        isAuthorized: function (role) {
-            return !!this.currentUser && this.currentUser.roles.indexOf(role) > -1;
-        }
-    };
+    //    currentUser: currentUser,
+    //    isAuthenticated: function() {
+    //        return !!this.currentUser;
+    //    },
+    //    isAuthorized: function (role) {
+    //        return !!this.currentUser && this.currentUser.roles.indexOf(role) > -1;
+    //    }
+    //};
 
         createCredentials: function(newCredentialsData) {
-        var newCredentials = new psCredentials(newCredentialsData);
-        var dfd = $q.defer();
+            var newCredentials = new psCredentials(newCredentialsData);
+            var dfd = $q.defer();
 
-        newCredentials.$save().then(function () {
-            currentCredentials = newCredentials;
-            dfd.resolve();
-        }, function (response) {
-            dfd.reject(response.data.reason);
-        });
+            newCredentials.$save().then(function () {
+                currentCredentials = newCredentials;
+                dfd.resolve();
+            }, function (response) {
+                dfd.reject(response.data.reason);
+            });
 
         return dfd.promise;
+        }
+
+
     }
-
-
 });
