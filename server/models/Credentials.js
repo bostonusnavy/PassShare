@@ -15,4 +15,4 @@ function createDefaultCredentials() {
     });
 }
 
-exports.createDefaultUsers = createDefaultCredentials;
+exports.createDefaultCredentials = createDefaultCredentials;
