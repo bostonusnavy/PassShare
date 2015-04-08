@@ -35,10 +35,12 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             resolve: routeRoleChecks.user
         })
         .when('/credentials', {
-            templateUrl: '/partials/credentialsResource/credentials'
+            templateUrl: '/partials/credentialsResource/credentials',
+            controller: 'psCredentialsCtrl'
         })
         .when('/createcredentials', {
-            templateUrl: '/partials/credentialsResource/createCredentials'
+            templateUrl: '/partials/credentialsResource/createCredentials',
+            controller: 'psCreateCredentialsCtrl'
         })
 });
 
@@ -50,8 +52,3 @@ angular.module('app').run(function ($rootScope, $location) {
         }
     });
 });
-
-////
-//angular.module('app').controller('mainCtrl', function ($scope) {
-//    $scope.myVar = "Angular, Reporting in...";
-//});
